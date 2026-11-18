@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1e9">
+  <title>Мозаики сквозь эпохи</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-button" id="menuButton" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="brand" href="#" data-view="home">МОЗАИКИ <span>СКВОЗЬ ЭПОХИ</span></a>
+    <span class="topbar-note">КУЛЬТУРНЫЙ АРХИВ · КАРАГАНДА</span>
+  </header>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="sidebar" id="sidebar" aria-label="Основная навигация">
+    <div class="sidebar-head">
+      <span class="eyebrow">НАВИГАЦИЯ</span>
+      <button class="close-menu" id="closeMenu" aria-label="Закрыть меню">×</button>
+    </div>
+    <button class="nav-main" data-view="history">История мозаичного искусства</button>
+    <div class="subnav" id="historySubnav">
+      <button data-view="byzantium">01 <span>Византийская эпоха</span></button>
+      <button data-view="soviet">02 <span>Советская эпоха</span></button>
+      <button data-view="today">03 <span>Мозаика сегодня</span></button>
+    </div>
+    <button class="nav-main" data-view="map">Мозаики на карте</button>
+    <div class="sidebar-foot">МОЗАИКИ СКВОЗЬ ЭПОХИ<br><span>Исследовательский проект</span></div>
+  </aside>
+
+  <main>
+    <section class="view active" id="home">
+      <div class="hero">
+        <div class="hero-kicker"><span></span> ИСКУССТВО · ПАМЯТЬ · ГОРОД</div>
+        <h1 class="mosaic-title"><span>МОЗАИКИ</span><span>СКВОЗЬ ЭПОХИ</span></h1>
+        <p class="hero-subtitle">Истории, которые город хранит на своих стенах.</p>
+        <button class="text-link" data-view="history">ОТКРЫТЬ ИССЛЕДОВАНИЕ <span>↗</span></button>
+        <div class="hero-stamp">KRG<br>№ 01</div>
+      </div>
+      <div class="intro-grid">
+        <div>
+          <p class="eyebrow">О ПРОЕКТЕ</p>
+          <h2>Город можно<br>прочитать по стенам.</h2>
+        </div>
+        <div class="placeholder-copy">
+          <p>Здесь появится основной текст исследования.</p>
+          <p>Это временная заглушка. Позже замени её своим текстом прямо в файле <code>index.html</code>.</p>
+        </div>
+      </div>
+      <div class="home-cards">
+        <button class="feature-card" data-view="history">
+          <span class="card-number">01 / ИССЛЕДОВАНИЕ</span>
+          <strong>История мозаичного искусства</strong>
+          <span class="card-arrow">↗</span>
+        </button>
+        <button class="feature-card map-feature" data-view="map">
+          <span class="card-number">02 / КАРТА</span>
+          <strong>Мозаики Караганды</strong>
+          <span class="card-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="view content-view" id="history">
+      <p class="eyebrow">РАЗДЕЛ 01 · ИССЛЕДОВАНИЕ</p>
+      <h1>История мозаичного искусства</h1>
+      <p class="lead">От древних традиций до городского искусства наших дней.</p>
+      <div class="era-grid">
+        <button class="era-card" data-view="byzantium"><span>01</span><strong>Византийская эпоха</strong><small>ОТКРЫТЬ РАЗДЕЛ ↗</small></button>
+        <button class="era-card" data-view="soviet"><span>02</span><strong>Советская эпоха</strong><small>ОТКРЫТЬ РАЗДЕЛ ↗</small></button>
+        <button class="era-card" data-view="today"><span>03</span><strong>Мозаика сегодня</strong><small>ОТКРЫТЬ РАЗДЕЛ ↗</small></button>
+      </div>
+    </section>
+
+    <section class="view content-view article-view" id="byzantium">
+      <button class="back-link" data-view="history">← К ИСТОРИИ МОЗАИКИ</button>
+      <p class="eyebrow">РАЗДЕЛ 01.1</p>
+      <h1>Византийская эпоха</h1>
+      <div class="article-placeholder">Здесь будет текст о мозаичном искусстве византийской эпохи. Замени эту заглушку своим материалом.</div>
+    </section>
+
+    <section class="view content-view article-view" id="soviet">
+      <button class="back-link" data-view="history">← К ИСТОРИИ МОЗАИКИ</button>
+      <p class="eyebrow">РАЗДЕЛ 01.2</p>
+      <h1>Советская эпоха</h1>
+      <div class="article-placeholder">Здесь будет текст о развитии мозаики в советское время. Замени эту заглушку своим материалом.</div>
+    </section>
+
+    <section class="view content-view article-view" id="today">
+      <button class="back-link" data-view="history">← К ИСТОРИИ МОЗАИКИ</button>
+      <p class="eyebrow">РАЗДЕЛ 01.3</p>
+      <h1>Мозаика сегодня</h1>
+      <div class="article-placeholder">Здесь будет текст о современной мозаике. Замени эту заглушку своим материалом.</div>
+    </section>
+
+    <section class="view map-view" id="map">
+      <div class="map-heading">
+        <div>
+          <p class="eyebrow">РАЗДЕЛ 02 · ИНТЕРАКТИВНАЯ КАРТА</p>
+          <h1>Мозаики на карте</h1>
+          <p class="lead">Нажми на сердечко, чтобы открыть историю мозаики.</p>
+        </div>
+        <span class="map-city">ҚАРАҒАНДЫ<br><small>КАЗАХСТАН</small></span>
+      </div>
+      <div class="map-shell">
+        <div id="mapCanvas" aria-label="Интерактивная карта Караганды"></div>
+        <div class="map-legend"><span class="heart-dot">♥</span> МЕСТО С МОЗАИКОЙ</div>
+      </div>
+      <p class="map-note">Координаты и сведения о произведениях добавляются в массив <code>mosaics</code> в файле <code>script.js</code>. Не публикуй неподтверждённые сведения как факты.</p>
+    </section>
+  </main>
+
+  <footer class="footer"><span>МОЗАИКИ СКВОЗЬ ЭПОХИ</span><span>ИССЛЕДОВАТЕЛЬСКИЙ ПРОЕКТ</span></footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
